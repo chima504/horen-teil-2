@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Übungen – Insel Bali & Zweites Thema</title>
+<style>
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #eef6fb, #ffffff);
+    color: #003366;
+    padding: 40px;
+    max-width: 650px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    color: #004080;
+    margin-top: 40px;
+  }
+
+  .exercise {
+    margin-top: 20px;
+    border: 2px solid #cce5ff;
+    border-radius: 10px;
+    padding: 20px;
+    background: #f9fcff;
+  }
+
+  .number {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    background: #f4f4f4;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .selected {
+    background-color: #cce5ff;
+    border-left: 6px solid #007bff;
+  }
+
+  .correct {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 6px solid #28a745;
+  }
+
+  .incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 6px solid #dc3545;
+  }
+
+  .btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<!-- 🔹 التمرين الأول -->
+<h2>Hören Teil 2</h2>
+<p><strong>Suza</strong></p>
+<div class="exercise" id="ex1">
+  <div id="ex1-n1" class="number" onclick="selectNumber('ex1',1)">1.</div>
+  <div id="ex1-n2" class="number" onclick="selectNumber('ex1',2)">2.</div>
+  <div id="ex1-n3" class="number" onclick="selectNumber('ex1',3)">3.</div>
+  <div id="ex1-n4" class="number" onclick="selectNumber('ex1',4)">4.</div>
+  <div id="ex1-n5" class="number" onclick="selectNumber('ex1',5)">5.</div>
+  <div id="ex1-n6" class="number" onclick="selectNumber('ex1',6)">6.</div>
+  <div id="ex1-n7" class="number" onclick="selectNumber('ex1',7)">7.</div>
+  <div id="ex1-n8" class="number" onclick="selectNumber('ex1',8)">8.</div>
+  <div id="ex1-n9" class="number" onclick="selectNumber('ex1',9)">9.</div>
+  <div id="ex1-n10" class="number"onclick="selectNumber('ex1',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex1')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Suzaمع البطاطا</h2>
+<p><strong>Suzaمع البطاطا</strong></p>
+<div class="exercise" id="ex2">
+  <div id="ex2-n1" class="number" onclick="selectNumber('ex2',1)">1.</div>
+  <div id="ex2-n2" class="number" onclick="selectNumber('ex2',2)">2.</div>
+  <div id="ex2-n3" class="number" onclick="selectNumber('ex2',3)">3.</div>
+  <div id="ex2-n4" class="number" onclick="selectNumber('ex2',4)">4.</div>
+  <div id="ex2-n5" class="number" onclick="selectNumber('ex2',5)">5.</div>
+  <div id="ex2-n6" class="number" onclick="selectNumber('ex2',6)">6.</div>
+  <div id="ex2-n7" class="number" onclick="selectNumber('ex2',7)">7.</div>
+  <div id="ex2-n8" class="number" onclick="selectNumber('ex2',8)">8.</div>
+  <div id="ex2-n9" class="number" onclick="selectNumber('ex2',9)">9.</div>
+  <div id="ex2-n10" class="number" onclick="selectNumber('ex2',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex2')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>jolia</h2>
+<p><strong>jolia</strong></p>
+<div class="exercise" id="ex3">
+  <div id="ex3-n1" class="number" onclick="selectNumber('ex3',1)">1.</div>
+  <div id="ex3-n2" class="number" onclick="selectNumber('ex3',2)">2.</div>
+  <div id="ex3-n3" class="number" onclick="selectNumber('ex3',3)">3.</div>
+  <div id="ex3-n4" class="number" onclick="selectNumber('ex3',4)">4.</div>
+  <div id="ex3-n5" class="number" onclick="selectNumber('ex3',5)">5.</div>
+  <div id="ex3-n6" class="number" onclick="selectNumber('ex3',6)">6.</div>
+  <div id="ex3-n7" class="number" onclick="selectNumber('ex3',7)">7.</div>
+  <div id="ex3-n8" class="number" onclick="selectNumber('ex3',8)">8.</div>
+  <div id="ex3-n9" class="number" onclick="selectNumber('ex3',9)">9.</div>
+  <div id="ex3-n10" class="number" onclick="selectNumber('ex3',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex3')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Beim Wettkampf</h2>
+<p><strong>Beim Wettkampf</strong></p>
+<div class="exercise" id="ex4">
+  <div id="ex4-n1" class="number" onclick="selectNumber('ex4',1)">1.</div>
+  <div id="ex4-n2" class="number" onclick="selectNumber('ex4',2)">2.</div>
+  <div id="ex4-n3" class="number" onclick="selectNumber('ex4',3)">3.</div>
+  <div id="ex4-n4" class="number" onclick="selectNumber('ex4',4)">4.</div>
+  <div id="ex4-n5" class="number" onclick="selectNumber('ex4',5)">5.</div>
+  <div id="ex4-n6" class="number" onclick="selectNumber('ex4',6)">6.</div>
+  <div id="ex4-n7" class="number" onclick="selectNumber('ex4',7)">7.</div>
+  <div id="ex4-n8" class="number" onclick="selectNumber('ex4',8)">8.</div>
+  <div id="ex4-n9" class="number" onclick="selectNumber('ex4',9)">9.</div>
+  <div id="ex4-n10" class="number" onclick="selectNumber('ex4',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex4')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Professor Steiner</h2>
+<p><strong>Professor Steiner</strong></p>
+<div class="exercise" id="ex5">
+  <div id="ex5-n1" class="number" onclick="selectNumber('ex5',1)">1.</div>
+  <div id="ex5-n2" class="number" onclick="selectNumber('ex5',2)">2.</div>
+  <div id="ex5-n3" class="number" onclick="selectNumber('ex5',3)">3.</div>
+  <div id="ex5-n4" class="number" onclick="selectNumber('ex5',4)">4.</div>
+  <div id="ex5-n5" class="number" onclick="selectNumber('ex5',5)">5.</div>
+  <div id="ex5-n6" class="number" onclick="selectNumber('ex5',6)">6.</div>
+  <div id="ex5-n7" class="number" onclick="selectNumber('ex5',7)">7.</div>
+  <div id="ex5-n8" class="number" onclick="selectNumber('ex5',8)">8.</div>
+  <div id="ex5-n9" class="number" onclick="selectNumber('ex5',9)">9.</div>
+  <div id="ex5-n10" class="number" onclick="selectNumber('ex5',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex5')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Professor Steinerمع الحشرات</h2>
+<p><strong>Professor Steinerمع الحشرات</strong></p>
+<div class="exercise" id="ex6">
+  <div id="ex6-n1" class="number" onclick="selectNumber('ex6',1)">1.</div>
+  <div id="ex6-n2" class="number" onclick="selectNumber('ex6',2)">2.</div>
+  <div id="ex6-n3" class="number" onclick="selectNumber('ex6',3)">3.</div>
+  <div id="ex6-n4" class="number" onclick="selectNumber('ex6',4)">4.</div>
+  <div id="ex6-n5" class="number" onclick="selectNumber('ex6',5)">5.</div>
+  <div id="ex6-n6" class="number" onclick="selectNumber('ex6',6)">6.</div>
+  <div id="ex6-n7" class="number" onclick="selectNumber('ex6',7)">7.</div>
+  <div id="ex6-n8" class="number" onclick="selectNumber('ex6',8)">8.</div>
+  <div id="ex6-n9" class="number" onclick="selectNumber('ex6',9)">9.</div>
+  <div id="ex6-n10" class="number" onclick="selectNumber('ex6',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex6')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Herr Scherer</h2>
+<p><strong>Herr Scherer</strong></p>
+<div class="exercise" id="ex7">
+  <div id="ex7-n1" class="number" onclick="selectNumber('ex7',1)">1.</div>
+  <div id="ex7-n2" class="number" onclick="selectNumber('ex7',2)">2.</div>
+  <div id="ex7-n3" class="number" onclick="selectNumber('ex7',3)">3.</div>
+  <div id="ex7-n4" class="number" onclick="selectNumber('ex7',4)">4.</div>
+  <div id="ex7-n5" class="number" onclick="selectNumber('ex7',5)">5.</div>
+  <div id="ex7-n6" class="number" onclick="selectNumber('ex7',6)">6.</div>
+  <div id="ex7-n7" class="number" onclick="selectNumber('ex7',7)">7.</div>
+  <div id="ex7-n8" class="number" onclick="selectNumber('ex7',8)">8.</div>
+  <div id="ex7-n9" class="number" onclick="selectNumber('ex7',9)">9.</div>
+  <div id="ex7-n10" class="number" onclick="selectNumber('ex7',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex7')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Mallorca</h2>
+<p><strong>Mallorca</strong></p>
+<div class="exercise" id="ex8">
+  <div id="ex8-n1" class="number" onclick="selectNumber('ex8',1)">1.</div>
+  <div id="ex8-n2" class="number" onclick="selectNumber('ex8',2)">2.</div>
+  <div id="ex8-n3" class="number" onclick="selectNumber('ex8',3)">3.</div>
+  <div id="ex8-n4" class="number" onclick="selectNumber('ex8',4)">4.</div>
+  <div id="ex8-n5" class="number" onclick="selectNumber('ex8',5)">5.</div>
+  <div id="ex8-n6" class="number" onclick="selectNumber('ex8',6)">6.</div>
+  <div id="ex8-n7" class="number" onclick="selectNumber('ex8',7)">7.</div>
+  <div id="ex8-n8" class="number" onclick="selectNumber('ex8',8)">8.</div>
+  <div id="ex8-n9" class="number" onclick="selectNumber('ex8',9)">9.</div>
+  <div id="ex8-n10" class="number" onclick="selectNumber('ex8',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex8')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Die zahl der Deutschen</h2>
+<p><strong>Die zahl der Deutschen</strong></p>
+<div class="exercise" id="ex9">
+  <div id="ex9-n1" class="number" onclick="selectNumber('ex9',1)">1.</div>
+  <div id="ex9-n2" class="number" onclick="selectNumber('ex9',2)">2.</div>
+  <div id="ex9-n3" class="number" onclick="selectNumber('ex9',3)">3.</div>
+  <div id="ex9-n4" class="number" onclick="selectNumber('ex9',4)">4.</div>
+  <div id="ex9-n5" class="number" onclick="selectNumber('ex9',5)">5.</div>
+  <div id="ex9-n6" class="number" onclick="selectNumber('ex9',6)">6.</div>
+  <div id="ex9-n7" class="number" onclick="selectNumber('ex9',7)">7.</div>
+  <div id="ex9-n8" class="number" onclick="selectNumber('ex9',8)">8.</div>
+  <div id="ex9-n9" class="number" onclick="selectNumber('ex9',9)">9.</div>
+  <div id="ex9-n10" class="number" onclick="selectNumber('ex9',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex9')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Meron Makeba</h2>
+<p><strong>Meron Makeba</strong></p>
+<div class="exercise" id="ex10">
+  <div id="ex10-n1" class="number" onclick="selectNumber('ex10',1)">1.</div>
+  <div id="ex10-n2" class="number" onclick="selectNumber('ex10',2)">2.</div>
+  <div id="ex10-n3" class="number" onclick="selectNumber('ex10',3)">3.</div>
+  <div id="ex10-n4" class="number" onclick="selectNumber('ex10',4)">4.</div>
+  <div id="ex10-n5" class="number" onclick="selectNumber('ex10',5)">5.</div>
+  <div id="ex10-n6" class="number" onclick="selectNumber('ex10',6)">6.</div>
+  <div id="ex10-n7" class="number" onclick="selectNumber('ex10',7)">7.</div>
+  <div id="ex10-n8" class="number" onclick="selectNumber('ex10',8)">8.</div>
+  <div id="ex10-n9" class="number" onclick="selectNumber('ex10',9)">9.</div>
+  <div id="ex10-n10" class="number" onclick="selectNumber('ex10',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex10')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Im Restaurant</h2>
+<p><strong>Im Restaurant</strong></p>
+<div class="exercise" id="ex11">
+  <div id="ex11-n1" class="number" onclick="selectNumber('ex11',1)">1.</div>
+  <div id="ex11-n2" class="number" onclick="selectNumber('ex11',2)">2.</div>
+  <div id="ex11-n3" class="number" onclick="selectNumber('ex11',3)">3.</div>
+  <div id="ex11-n4" class="number" onclick="selectNumber('ex11',4)">4.</div>
+  <div id="ex11-n5" class="number" onclick="selectNumber('ex11',5)">5.</div>
+   <div id="ex11-n6" class="number" onclick="selectNumber('ex11',6)">6.</div>
+  <div id="ex11-n7" class="number" onclick="selectNumber('ex11',7)">7.</div>
+  <div id="ex11-n8" class="number" onclick="selectNumber('ex11',8)">8.</div>
+  <div id="ex11-n9" class="number" onclick="selectNumber('ex11',9)">9.</div>
+  <div id="ex11-n10" class="number" onclick="selectNumber('ex11',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex11')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Im Restaurant مع الالب</h2>
+<p><strong>Im Restaurant مع الالب</strong></p>
+<div class="exercise" id="ex12">
+  <div id="ex12-n1" class="number" onclick="selectNumber('ex12',1)">1.</div>
+  <div id="ex12-n2" class="number" onclick="selectNumber('ex12',2)">2.</div>
+  <div id="ex12-n3" class="number" onclick="selectNumber('ex12',3)">3.</div>
+  <div id="ex12-n4" class="number" onclick="selectNumber('ex12',4)">4.</div>
+  <div id="ex12-n5" class="number" onclick="selectNumber('ex12',5)">5.</div>
+   <div id="ex12-n6" class="number" onclick="selectNumber('ex12',6)">6.</div>
+  <div id="ex12-n7" class="number" onclick="selectNumber('ex12',7)">7.</div>
+  <div id="ex12-n8" class="number" onclick="selectNumber('ex12',8)">8.</div>
+  <div id="ex12-n9" class="number" onclick="selectNumber('ex12',9)">9.</div>
+  <div id="ex12-n10" class="number" onclick="selectNumber('ex12',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex12')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Die Berufseinstig</h2>
+<p><strong>Die Berufseinstig</strong></p>
+<div class="exercise" id="ex13">
+  <div id="ex13-n1" class="number" onclick="selectNumber('ex13',1)">1.</div>
+  <div id="ex13-n2" class="number" onclick="selectNumber('ex13',2)">2.</div>
+  <div id="ex13-n3" class="number" onclick="selectNumber('ex13',3)">3.</div>
+  <div id="ex13-n4" class="number" onclick="selectNumber('ex13',4)">4.</div>
+  <div id="ex13-n5" class="number" onclick="selectNumber('ex13',5)">5.</div>
+   <div id="ex13-n6" class="number" onclick="selectNumber('ex13',6)">6.</div>
+  <div id="ex13-n7" class="number" onclick="selectNumber('ex13',7)">7.</div>
+  <div id="ex13-n8" class="number" onclick="selectNumber('ex13',8)">8.</div>
+  <div id="ex13-n9" class="number" onclick="selectNumber('ex13',9)">9.</div>
+  <div id="ex13-n10" class="number" onclick="selectNumber('ex13',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex13')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Frau schenk</h2>
+<p><strong>Frau schenk</strong></p>
+<div class="exercise" id="ex14">
+  <div id="ex14-n1" class="number" onclick="selectNumber('ex14',1)">1.</div>
+  <div id="ex14-n2" class="number" onclick="selectNumber('ex14',2)">2.</div>
+  <div id="ex14-n3" class="number" onclick="selectNumber('ex14',3)">3.</div>
+  <div id="ex14-n4" class="number" onclick="selectNumber('ex14',4)">4.</div>
+  <div id="ex14-n5" class="number" onclick="selectNumber('ex14',5)">5.</div>
+   <div id="ex14-n6" class="number" onclick="selectNumber('ex14',6)">6.</div>
+  <div id="ex14-n7" class="number" onclick="selectNumber('ex14',7)">7.</div>
+  <div id="ex14-n8" class="number" onclick="selectNumber('ex14',8)">8.</div>
+  <div id="ex14-n9" class="number" onclick="selectNumber('ex14',9)">9.</div>
+  <div id="ex14-n10" class="number" onclick="selectNumber('ex14',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex14')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Frau schenk مع الالب</h2>
+<p><strong>Frau schenk مع الالب</strong></p>
+<div class="exercise" id="ex15">
+  <div id="ex15-n1" class="number" onclick="selectNumber('ex15',1)">1.</div>
+  <div id="ex15-n2" class="number" onclick="selectNumber('ex15',2)">2.</div>
+  <div id="ex15-n3" class="number" onclick="selectNumber('ex15',3)">3.</div>
+  <div id="ex15-n4" class="number" onclick="selectNumber('ex15',4)">4.</div>
+  <div id="ex15-n5" class="number" onclick="selectNumber('ex15',5)">5.</div>
+   <div id="ex15-n6" class="number" onclick="selectNumber('ex15',6)">6.</div>
+  <div id="ex15-n7" class="number" onclick="selectNumber('ex15',7)">7.</div>
+  <div id="ex15-n8" class="number" onclick="selectNumber('ex15',8)">8.</div>
+  <div id="ex15-n9" class="number" onclick="selectNumber('ex15',9)">9.</div>
+  <div id="ex15-n10" class="number" onclick="selectNumber('ex15',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex15')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Die deutsche machen</h2>
+<p><strong>Die deutsche machen</strong></p>
+<div class="exercise" id="ex16">
+  <div id="ex16-n1" class="number" onclick="selectNumber('ex16',1)">1.</div>
+  <div id="ex16-n2" class="number" onclick="selectNumber('ex16',2)">2.</div>
+  <div id="ex16-n3" class="number" onclick="selectNumber('ex16',3)">3.</div>
+  <div id="ex16-n4" class="number" onclick="selectNumber('ex16',4)">4.</div>
+  <div id="ex16-n5" class="number" onclick="selectNumber('ex16',5)">5.</div>
+   <div id="ex16-n6" class="number" onclick="selectNumber('ex16',6)">6.</div>
+  <div id="ex16-n7" class="number" onclick="selectNumber('ex16',7)">7.</div>
+  <div id="ex16-n8" class="number" onclick="selectNumber('ex16',8)">8.</div>
+  <div id="ex16-n9" class="number" onclick="selectNumber('ex16',9)">9.</div>
+  <div id="ex16-n10" class="number" onclick="selectNumber('ex16',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex16')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Markus</h2>
+<p><strong>Markus</strong></p>
+<div class="exercise" id="ex17">
+  <div id="ex17-n1" class="number" onclick="selectNumber('ex17',1)">1.</div>
+  <div id="ex17-n2" class="number" onclick="selectNumber('ex17',2)">2.</div>
+  <div id="ex17-n3" class="number" onclick="selectNumber('ex17',3)">3.</div>
+  <div id="ex17-n4" class="number" onclick="selectNumber('ex17',4)">4.</div>
+  <div id="ex17-n5" class="number" onclick="selectNumber('ex17',5)">5.</div>
+   <div id="ex17-n6" class="number" onclick="selectNumber('ex17',6)">6.</div>
+  <div id="ex17-n7" class="number" onclick="selectNumber('ex17',7)">7.</div>
+  <div id="ex17-n8" class="number" onclick="selectNumber('ex17',8)">8.</div>
+  <div id="ex17-n9" class="number" onclick="selectNumber('ex17',9)">9.</div>
+  <div id="ex17-n10" class="number" onclick="selectNumber('ex17',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex17')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Karimov</h2>
+<p><strong>Karimov</strong></p>
+<div class="exercise" id="ex18">
+  <div id="ex18-n1" class="number" onclick="selectNumber('ex18',1)">1.</div>
+  <div id="ex18-n2" class="number" onclick="selectNumber('ex18',2)">2.</div>
+  <div id="ex18-n3" class="number" onclick="selectNumber('ex18',3)">3.</div>
+  <div id="ex18-n4" class="number" onclick="selectNumber('ex18',4)">4.</div>
+  <div id="ex18-n5" class="number" onclick="selectNumber('ex18',5)">5.</div>
+   <div id="ex18-n6" class="number" onclick="selectNumber('ex18',6)">6.</div>
+  <div id="ex18-n7" class="number" onclick="selectNumber('ex18',7)">7.</div>
+  <div id="ex18-n8" class="number" onclick="selectNumber('ex18',8)">8.</div>
+  <div id="ex18-n9" class="number" onclick="selectNumber('ex10-n8',9)">9.</div>
+  <div id="ex18-n10" class="number" onclick="selectNumber('ex18',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex18')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Gassar und frau janke</h2>
+<p><strong>Gassar und frau janke</strong></p>
+<div class="exercise" id="ex19">
+  <div id="ex19-n1" class="number" onclick="selectNumber('ex19',1)">1.</div>
+  <div id="ex19-n2" class="number" onclick="selectNumber('ex19',2)">2.</div>
+  <div id="ex19-n3" class="number" onclick="selectNumber('ex19',3)">3.</div>
+  <div id="ex19-n4" class="number" onclick="selectNumber('ex19',4)">4.</div>
+  <div id="ex19-n5" class="number" onclick="selectNumber('ex19',5)">5.</div>
+   <div id="ex19-n6" class="number" onclick="selectNumber('ex19',6)">6.</div>
+  <div id="ex19-n7" class="number" onclick="selectNumber('ex19',7)">7.</div>
+  <div id="ex19-n8" class="number" onclick="selectNumber('ex19',8)">8.</div>
+  <div id="ex19-n9" class="number" onclick="selectNumber('ex19',9)">9.</div>
+  <div id="ex19-n10" class="number" onclick="selectNumber('ex19',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex19')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Carina</h2>
+<p><strong>Carina</strong></p>
+<div class="exercise" id="ex20">
+  <div id="ex20-n1" class="number" onclick="selectNumber('ex20',1)">1.</div>
+  <div id="ex20-n2" class="number" onclick="selectNumber('ex20',2)">2.</div>
+  <div id="ex20-n3" class="number" onclick="selectNumber('ex20',3)">3.</div>
+  <div id="ex20-n4" class="number" onclick="selectNumber('ex20',4)">4.</div>
+  <div id="ex20-n5" class="number" onclick="selectNumber('ex20',5)">5.</div>
+   <div id="ex20-n6" class="number" onclick="selectNumber('ex20',6)">6.</div>
+  <div id="ex20-n7" class="number" onclick="selectNumber('ex20',7)">7.</div>
+  <div id="ex20-n8" class="number" onclick="selectNumber('ex20',8)">8.</div>
+  <div id="ex20-n9" class="number" onclick="selectNumber('ex20',9)">9.</div>
+  <div id="ex20-n10" class="number" onclick="selectNumber('ex20',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex20')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Die Tu Dresden</h2>
+<p><strong>Die Tu Dresden</strong></p>
+<div class="exercise" id="ex21">
+  <div id="ex21-n1" class="number" onclick="selectNumber('ex21',1)">1.</div>
+  <div id="ex21-n2" class="number" onclick="selectNumber('ex21',2)">2.</div>
+  <div id="ex21-n3" class="number" onclick="selectNumber('ex21',3)">3.</div>
+  <div id="ex21-n4" class="number" onclick="selectNumber('ex21',4)">4.</div>
+  <div id="ex21-n5" class="number" onclick="selectNumber('ex21',5)">5.</div>
+  <div id="ex21-n6" class="number" onclick="selectNumber('ex21',6)">6.</div>
+  <div id="ex21-n7" class="number" onclick="selectNumber('ex21',7)">7.</div>
+  <div id="ex21-n8" class="number" onclick="selectNumber('ex21',8)">8.</div>
+  <div id="ex21-n9" class="number" onclick="selectNumber('ex21',9)">9.</div>
+  <div id="ex21-n10" class="number" onclick="selectNumber('ex21',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex21')">تصحيح</button>
+</div>
+<!-- 🔹 التمرين الثاني -->
+<h2>Frau kider aus Malta</h2>
+<p><strong>Frau kider aus Malta</strong></p>
+<div class="exercise" id="ex22">
+  <div id="ex22-n1" class="number" onclick="selectNumber('ex22',1)">1.</div>
+  <div id="ex22-n2" class="number" onclick="selectNumber('ex22',2)">2.</div>
+  <div id="ex22-n3" class="number" onclick="selectNumber('ex22',3)">3.</div>
+  <div id="ex22-n4" class="number" onclick="selectNumber('ex22',4)">4.</div>
+  <div id="ex22-n5" class="number" onclick="selectNumber('ex22',5)">5.</div>
+  <div id="ex22-n6" class="number" onclick="selectNumber('ex22',6)">6.</div>
+  <div id="ex22-n7" class="number" onclick="selectNumber('ex22',7)">7.</div>
+  <div id="ex22-n8" class="number" onclick="selectNumber('ex22',8)">8.</div>
+  <div id="ex22-n9" class="number" onclick="selectNumber('ex22',9)">9.</div>
+  <div id="ex22-n10" class="number" onclick="selectNumber('ex22',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex22')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Franz schumacher</h2>
+<p><strong>Franz schumacher</strong></p>
+<div class="exercise" id="ex23">
+  <div id="ex23-n1" class="number" onclick="selectNumber('ex23',1)">1.</div>
+  <div id="ex23-n2" class="number" onclick="selectNumber('ex23',2)">2.</div>
+  <div id="ex23-n3" class="number" onclick="selectNumber('ex23',3)">3.</div>
+  <div id="ex23-n4" class="number" onclick="selectNumber('ex23',4)">4.</div>
+  <div id="ex23-n5" class="number" onclick="selectNumber('ex23',5)">5.</div>
+  <div id="ex23-n6" class="number" onclick="selectNumber('ex23',6)">6.</div>
+  <div id="ex23-n7" class="number" onclick="selectNumber('ex23',7)">7.</div>
+  <div id="ex23-n8" class="number" onclick="selectNumber('ex23',8)">8.</div>
+  <div id="ex23-n9" class="number" onclick="selectNumber('ex23',9)">9.</div>
+  <div id="ex23-n10" class="number" onclick="selectNumber('ex23',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex23')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Zu dresden</h2>
+<p><strong>Zu deesden</strong></p>
+<div class="exercise" id="ex24">
+  <div id="ex24-n1" class="number" onclick="selectNumber('ex24',1)">1.</div>
+  <div id="ex24-n2" class="number" onclick="selectNumber('ex24',2)">2.</div>
+  <div id="ex24-n3" class="number" onclick="selectNumber('ex24',3)">3.</div>
+  <div id="ex24-n4" class="number" onclick="selectNumber('ex24',4)">4.</div>
+  <div id="ex24-n5" class="number" onclick="selectNumber('ex24',5)">5.</div>
+  <div id="ex24-n6" class="number" onclick="selectNumber('ex24',6)">6.</div>
+  <div id="ex24-n7" class="number" onclick="selectNumber('ex24',7)">7.</div>
+  <div id="ex24-n8" class="number" onclick="selectNumber('ex24',8)">8.</div>
+  <div id="ex24-n9" class="number" onclick="selectNumber('ex24',9)">9.</div>
+  <div id="ex24-n10" class="number" onclick="selectNumber('ex24',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex24')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Vanessa </h2>
+<p><strong>Vanessa</strong></p>
+<div class="exercise" id="ex25">
+  <div id="ex25-n1" class="number" onclick="selectNumber('ex25',1)">1.</div>
+  <div id="ex25-n2" class="number" onclick="selectNumber('ex25',2)">2.</div>
+  <div id="ex25-n3" class="number" onclick="selectNumber('ex25',3)">3.</div>
+  <div id="ex25-n4" class="number" onclick="selectNumber('ex25',4)">4.</div>
+  <div id="ex25-n5" class="number" onclick="selectNumber('ex25',5)">5.</div>
+  <div id="ex25-n6" class="number" onclick="selectNumber('ex25',6)">6.</div>
+  <div id="ex25-n7" class="number" onclick="selectNumber('ex25-n5',7)">7.</div>
+  <div id="ex25-n8" class="number" onclick="selectNumber('ex25',8)">8.</div>
+  <div id="ex25-n9" class="number" onclick="selectNumber('ex25',9)">9.</div>
+  <div id="ex25-n10" class="number" onclick="selectNumber('ex25',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex25')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Nadin</h2>
+<p><strong>Nadin</strong></p>
+<div class="exercise" id="ex26">
+  <div id="ex26-n1" class="number" onclick="selectNumber('ex26',1)">1.</div>
+  <div id="ex26-n2" class="number" onclick="selectNumber('ex26',2)">2.</div>
+  <div id="ex26-n3" class="number" onclick="selectNumber('ex26',3)">3.</div>
+  <div id="ex26-n4" class="number" onclick="selectNumber('ex26',4)">4.</div>
+  <div id="ex26-n5" class="number" onclick="selectNumber('ex26',5)">5.</div>
+  <div id="ex26-n6" class="number" onclick="selectNumber('ex26',6)">6.</div>
+  <div id="ex26-n7" class="number" onclick="selectNumber('ex26',7)">7.</div>
+  <div id="ex26-n8" class="number" onclick="selectNumber('ex26',8)">8.</div>
+  <div id="ex26-n9" class="number" onclick="selectNumber('ex26',9)">9.</div>
+  <div id="ex26-n10" class="number" onclick="selectNumber('ex26',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex26')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Zu Beginn</h2>
+<p><strong>Zu Beginn</strong></p>
+<div class="exercise" id="ex27">
+  <div id="ex27-n1" class="number" onclick="selectNumber('ex27',1)">1.</div>
+  <div id="ex27-n2" class="number" onclick="selectNumber('ex27',2)">2.</div>
+  <div id="ex27-n3" class="number" onclick="selectNumber('ex27',3)">3.</div>
+  <div id="ex27-n4" class="number" onclick="selectNumber('ex27',4)">4.</div>
+  <div id="ex27-n5" class="number" onclick="selectNumber('ex27',5)">5.</div>
+  <div id="ex27-n6" class="number" onclick="selectNumber('ex27',6)">6.</div>
+  <div id="ex27-n7" class="number" onclick="selectNumber('ex27',7)">7.</div>
+  <div id="ex27-n8" class="number" onclick="selectNumber('ex27',8)">8.</div>
+  <div id="ex27-n9" class="number" onclick="selectNumber('ex27',9)">9.</div>
+  <div id="ex27-n10" class="number" onclick="selectNumber('ex27',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex27')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Roland Aufsteigen</h2>
+<p><strong>Roland Aufsteigen</strong></p>
+<div class="exercise" id="ex28">
+  <div id="ex28-n1" class="number" onclick="selectNumber('ex28',1)">1.</div>
+  <div id="ex28-n2" class="number" onclick="selectNumber('ex28',2)">2.</div>
+  <div id="ex28-n3" class="number" onclick="selectNumber('ex28',3)">3.</div>
+  <div id="ex28-n4" class="number" onclick="selectNumber('ex28',4)">4.</div>
+  <div id="ex28-n5" class="number" onclick="selectNumber('ex28',5)">5.</div>
+  <div id="ex28-n6" class="number" onclick="selectNumber('ex28',6)">6.</div>
+  <div id="ex28-n7" class="number" onclick="selectNumber('ex28',7)">7.</div>
+  <div id="ex28-n8" class="number" onclick="selectNumber('ex28',8)">8.</div>
+  <div id="ex28-n9" class="number" onclick="selectNumber('ex28',9)">9.</div>
+  <div id="ex28-n10" class="number" onclick="selectNumber('ex28',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex28')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Roland Hoheren lige</h2>
+<p><strong>Roland Hoheren lige</strong></p>
+<div class="exercise" id="ex29">
+  <div id="ex29-n1" class="number" onclick="selectNumber('ex29',1)">1.</div>
+  <div id="ex29-n2" class="number" onclick="selectNumber('ex29',2)">2.</div>
+  <div id="ex29-n3" class="number" onclick="selectNumber('ex29',3)">3.</div>
+  <div id="ex29-n4" class="number" onclick="selectNumber('ex29',4)">4.</div>
+  <div id="ex29-n5" class="number" onclick="selectNumber('ex29',5)">5.</div>
+  <div id="ex29-n6" class="number" onclick="selectNumber('ex29',6)">6.</div>
+  <div id="ex29-n7" class="number" onclick="selectNumber('ex29',7)">7.</div>
+  <div id="ex29-n8" class="number" onclick="selectNumber('ex29',8)">8.</div>
+  <div id="ex29-n9" class="number" onclick="selectNumber('ex29',9)">9.</div>
+  <div id="ex29-n10" class="number" onclick="selectNumber('ex29',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex29')">تصحيح</button>
+</div>
+
+<!-- 🔹 التمرين الثاني -->
+<h2>Roland Spielen</h2>
+<p><strong>Roland Spielen</strong></p>
+<div class="exercise" id="ex30">
+  <div id="ex30-n1" class="number" onclick="selectNumber('ex30',1)">1.</div>
+  <div id="ex30-n2" class="number" onclick="selectNumber('ex30',2)">2.</div>
+  <div id="ex30-n3" class="number" onclick="selectNumber('ex30',3)">3.</div>
+  <div id="ex30-n4" class="number" onclick="selectNumber('ex30',4)">4.</div>
+  <div id="ex30-n5" class="number" onclick="selectNumber('ex30',5)">5.</div>
+  <div id="ex30-n6" class="number" onclick="selectNumber('ex30',6)">6.</div>
+  <div id="ex30-n7" class="number" onclick="selectNumber('ex30',7)">7.</div>
+  <div id="ex30-n8" class="number" onclick="selectNumber('ex30',8)">8.</div>
+  <div id="ex30-n9" class="number" onclick="selectNumber('ex30',9)">9.</div>
+  <div id="ex30-n10" class="number" onclick="selectNumber('ex30',10)">10.</div>
+  <button class="btn" onclick="checkAnswers('ex30')">تصحيح</button>
+</div>
+<script>
+let selections = {
+  ex1: [],
+  ex2: [],
+  ex3: [],
+  ex4: [], 
+  ex5: [],
+  ex6: [],
+  ex7: [],
+  ex8: [],
+  ex9: [],
+  ex10: [],
+  ex11: [],
+  ex12: [],
+  ex13: [],
+  ex14: [],
+  ex15: [],
+  ex16: [],
+  ex17: [],
+  ex18: [],
+  ex19: [],
+  ex20: [],
+  ex21: [],
+  ex22: [],
+  ex23: [],
+  ex24: [],
+  ex25: [],
+  ex26: [],
+  ex27: [],
+  ex28: [],
+  ex29: [],
+  ex30: [],
+};
+
+// ✅ الجمل الصحيحة لكل تمرين
+const answers = {
+  ex1: {
+    1: ".",
+    3: ".",
+    4: ".",
+    8: ".",
+  },
+  ex2: {
+    1: ".",
+    3: ".",
+    4: ".",
+    7: ".",
+    8: ".",
+  },
+  ex3: {
+    1: ".",
+    3: ".",
+    4: ".",
+    5: ".",
+    8: ".",
+    },
+  ex4: {
+    1: ".",
+    2: ".",
+    4: ".",
+    6: "."
+     },
+  ex5: {
+    2: ".",
+    9: ".",
+    10: ".",
+      },
+  ex6: {
+    2: ".",
+    9: ".",
+    10: ".",
+    6: ".",
+    8: ".",
+     },
+  ex7: {
+    3: ".",
+    4: ".",
+    10: ".",
+      },
+  ex8: {
+    3: ".",
+    4: ".",
+    7: ".",
+      },
+  ex9: {
+    3: ".",
+    7: ".",
+    4: ".",
+      },
+  ex10: {
+    4: ".",
+    9: ".",
+    5: ".",
+       },
+  ex11: {
+    1: ".",
+    3: ".",
+    4: ".",
+    8: ".",
+    9: ".",
+       },
+  ex12: {
+    1: ".",
+    3: ".",
+    4: ".",
+    8: ".",
+    9: ".",
+    7: ".",
+     },
+  ex13: {
+    1: ".",
+    3: ".",
+    4: ".",
+    8: ".",
+    9: ".",
+    10: ".",
+     },
+  ex14: {
+    1: ".",
+    4: ".",
+    8: ".",
+    7: ".",
+    6: ".",
+       },
+  ex15: {
+    1: ".",
+    4: ".",
+    7: ".",
+    8: ".",
+       },
+  ex16: {
+    3: ".",
+    4: ".",
+    5: ".",
+    9: ".",
+       },
+  ex17: {
+    4: ".",
+    2: ".",
+    5: ".",
+    8: ".",
+    10: ".",
+       },
+  ex18: {
+    9: ".",
+    2: ".",
+    5: ".",
+    8: ".",
+    10: ".",
+       },
+  ex19: {
+    8: ".",
+    3: ".",
+    4: ".",
+    9: ".",
+    10: ".",
+       },
+  ex20: {
+    1: ".",
+    3: ".",
+    4: ".",
+    8: ".",
+    9: ".",
+    10: ".",
+        },
+  ex21: {
+    3: ".",
+    5: ".",
+    7: ".",
+    8: ".",
+    10: ".",
+        },
+  ex22: {
+    1: ".",
+    2: ".",
+    4: ".",
+    5: ".",
+    8: ".",
+    9: ".",
+       },
+  ex23: {
+    1: ".",
+    2: ".",
+    4: ".",
+    6: ".",
+    8: ".",
+    10: ".",
+       },
+  ex24: {
+    1: ".",
+    3: ".",
+    5: ".",
+    7: ".",
+    8: ".",
+    10: ".",
+       },
+  ex25: {
+    2: ".",
+    3: ".",
+    4: ".",
+    6: ".",
+    8: ".",
+    10: ".",
+       },
+  ex26: {
+    2: ".",
+    3: ".",
+    5: ".",
+    6: ".",
+    8: ".",
+    10: ".",
+       },
+  ex27: {
+    1: ".",
+    2: ".",
+    3: ".",
+    4: ".",
+    6: ".",
+    8: ".",
+    9: ".",
+       },
+  ex28: {
+    3: ".",
+    4: ".",
+    7: ".",
+    9: ".",
+       },
+  ex29: {
+    2: ".",
+    3: ".",
+    5: ".",
+    8: ".",
+    9: ".",
+       },
+  ex30: {
+    2: ".",
+    3: ".",
+    4: ".",
+    7: ".",
+    9: ".",
+    10: ".",
+
+
+  }
+};
+
+// 📌 اختيار الأرقام
+function selectNumber(exercise, num) {
+  const key = `${exercise}-n${num}`;
+  const div = document.getElementById(key);
+
+  if (selections[exercise].includes(num)) {
+    selections[exercise] = selections[exercise].filter(n => n !== num);
+    div.classList.remove('selected');
+  } else {
+    selections[exercise].push(num);
+    div.classList.add('selected');
+  }
+}
+
+// 📌 تصحيح كل تمرين بوحدو
+function checkAnswers(exercise) {
+  for (let i = 1; i <= 10; i++) {
+    const div = document.getElementById(`${exercise}-n${i}`);
+    div.onclick = null; // يمنع التغيير بعد التصحيح
+
+    if (answers[exercise][i]) {
+      div.classList.remove('selected');
+      div.classList.add('correct');
+      div.innerHTML = i + ". " + answers[exercise][i];
+    } else if (selections[exercise].includes(i)) {
+      div.classList.remove('selected');
+      div.classList.add('incorrect');
+    }
+  }
+}
+</script>
+
+</body>
+</html>
